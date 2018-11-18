@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="jumbotron text-center">
+    <h1>Enter Your Admin Password:</h1>
+    <form asp-action="Index">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <input type="password" name="password">
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+        </div>
+    </form>
+</div>

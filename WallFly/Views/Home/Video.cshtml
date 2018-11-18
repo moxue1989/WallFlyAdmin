@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Microsoft.WindowsAzure.Storage.Blob.IListBlobItem>
+
+@{
+    ViewData["Title"] = "Video Files";
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Video Files
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="@item.Uri">@item.Uri.ToString().Split('/').Last()</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
